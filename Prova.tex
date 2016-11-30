@@ -26,7 +26,7 @@
 
 \nomeProfessor{Alexander Robert Kutzke}
 \nomeCurso{Análise e Desenvolvimento de Sistemas}
-\nomeDisciplina{TI 161 - Desenvolvimento de Aplicações WEB 1}
+\nomeDisciplina{}
 \semestre{}   % Deixe em branco se for para mais de um semestre (recuperação)
 \dataDaProva{\today}
 \tipoAvaliacao{Primeira avaliação}
@@ -46,112 +46,29 @@
 \begin{questions}
 
 % =============================================================================
-\question[1] Explique, de maneira resumida, como funciona o paradigma de programação para a WEB (paradigma cliente-servidor). Indique qual o objetivo do protocolo HTTP (HyperText Transfer Protocol) e suas relações com o desenvolvimento WEB.
+% \question[2] Explique, linha a linha, o código PHP abaixo:
 
-% =============================================================================
-\question[1] Explique o que é o HTML (HyperText Markup Language) e suas principais características.
+% \lstset{
+% 	numbers=left,
+% 	language=PHP,
+% 	frame=single,
+% 	breaklines=true,
+% 	basicstyle=\footnotesize
+% }
 
-% =============================================================================
-\question[1] Explique o que é o CSS (Cascading Style Sheets) e qual a sua função no desenvolvimento WEB.
+% \begin{lstlisting}
+%  <?php
+%  session_start();
 
-% =============================================================================
-\question[1] Explique o que é o Javascript e qual a sua função no desenvolvimento WEB.
+%  if ( !isset($_SESSION['login']) and isset($_SESSION['senha']) ){
+%    session_destroy();
+%    unset($_SESSION['login']);
+%    unset($_SESSION['senha']);
+%    header('location:login.php');
+%  }
+%  ?>
+% \end{lstlisting}
 
-% =============================================================================
-\question[1] Explique o que é o PHP e como ele pode ser utilizado no desenvolvimento WEB.
-
-% =============================================================================
-\question[2] Explique o que são e como funcionam as sessões (Sessions) do PHP. Qual a relação desse recurso com os “Cookies” do protocolo HTTP?
-
-% =============================================================================
-\question[3] Considere que você é um desenvolvedor de uma aplicação Web em que é necessário atualizar um cadastro de um cliente (nome, email, profissão, cpf, etc.). Uma tela dessa aplicação exibe a lista de todos os clientes cadastrados. Nesta página, cada nome de cliente possui ao lado link chamado “alterar”, o qual direciona para a página que deve conter o formulário com os dados atuais do cliente para que o usuário possa alterá-los. Explique, em linhas gerais, como você implementaria esse processo de alteração dos dados de um cliente, a partir do clique no link “alterar” (considere que cada usuário possui uma identificação numérica, o id). Além disso, Identifique em quais locais você utilizaria os métodos GET ou POST do protocolo HTTP. A tabela abaixo simula o conteúdo da página de listagem dos clientes:
-
-\begin{table}[H]
-\centering
-\caption{Exemplo de listagem dos clientes.}
-\label{my-label}
-\begin{tabular}{@{}lll@{}}
-\toprule
-Id & Cliente       & Opções  \\ \midrule
-1  & Homer Simpson & alterar \\
-2  & Marge Simpson & alterar \\
-3  & Bart Simpson  & alterar \\ \bottomrule
-\end{tabular}
-\end{table}
-
-% =============================================================================
-\question[2] Explique, linha a linha, o código PHP abaixo:
-
-\lstset{
-	numbers=left,
-	language=PHP,
-	frame=single,
-	breaklines=true,
-	basicstyle=\footnotesize
-}
-
-\begin{lstlisting}
- <?php
- session_start();
-
- if ( !isset($_SESSION['login']) and isset($_SESSION['senha']) ){
-   session_destroy();
-   unset($_SESSION['login']);
-   unset($_SESSION['senha']);
-   header('location:login.php');
- }
- ?>
-\end{lstlisting}
-
-% =============================================================================
-\question[2] Considere o seguinte código HTML: 
-
-\lstset{
-	language=HTML
-}
-
-
-\begin{lstlisting}
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.container {
-    position: relative;
-}
-
-
-.classex {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    font-size: 18px;
-}
-
-
-img { 
-    width: 100%;
-    height: auto;
-}
-</style>
-</head>
-<body>
-
-
-<h1>Prova Web 1</h1>
-
-
-<div class="container">
-  <img src="imagem.jpg" width="1000" height="300">
-  <div class="classex">Algum texto qualquer</div>
-</div>
-
-
-</body>
-</html>
-\end{lstlisting}
-
-Faça um esboço de como essa página seria renderizada pelo Navegador. Indique os diferentes elementos e seus respectivos posicionamentos.
 
 \end{questions}
 \end{document}
